@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sanberapp_55/page/nav/page_tiga.dart';
 
 class PageDua extends StatelessWidget {
@@ -31,7 +32,8 @@ class PageDua extends StatelessWidget {
                   //     MaterialPageRoute(
                   //       builder: (context) => PageTiga(),
                   //     ));
-                  Navigator.pushReplacementNamed(context, '/page-tiga');
+                  // Navigator.pushReplacementNamed(context, '/page-tiga');
+                  Get.off(() => PageTiga());
                 },
                 child: Text('NEXT PAGE 3 ==>')),
           ],

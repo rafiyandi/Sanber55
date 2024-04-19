@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:sanberapp_55/router/app_routes_named.dart';
 
 import 'page_dua.dart';
 
@@ -22,7 +24,8 @@ class PageSatu extends StatelessWidget {
                   //     MaterialPageRoute(
                   //       builder: (context) => PageDua(),
                   //     ));
-                  Navigator.pushNamed(context, '/page-dua');
+                  // Get.to(() => PageDua());
+                  Get.toNamed(AppRoutesNamed.pageDua);
                 },
                 child: Text('NEXT PAGE 2 ==>>>'))
           ],

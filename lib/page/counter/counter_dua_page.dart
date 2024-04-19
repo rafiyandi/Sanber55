@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 import 'package:sanberapp_55/controller/counter_controller.dart';
-import 'package:sanberapp_55/page/counter/counter_dua_page.dart';
-import 'package:sanberapp_55/router/app_routes_named.dart';
 
-class CounterPage extends StatelessWidget {
+class CounterDuaPage extends StatelessWidget {
+  const CounterDuaPage({super.key});
+
   @override
   Widget build(BuildContext context) {
+    var counterC = Get.find<CounterController>();
+    print("Di rebuild Ulang");
     return Scaffold(
       appBar: AppBar(
         title: Text('Counter Page'),
@@ -16,6 +18,8 @@ class CounterPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text("Data Counter Page Satu ${counterC.counter}"),
+            // SizedBox(height: 10),
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.center,
             //   children: [
@@ -39,17 +43,6 @@ class CounterPage extends StatelessWidget {
             //         child: Icon(Icons.add)),
             //   ],
             // ),
-            // SizedBox(height: 50),
-            ElevatedButton(
-                onPressed: () {
-                  // Navigator.push(
-                  //     context,
-                  //     MaterialPageRoute(
-                  //       builder: (context) => CounterDuaPage(),
-                  //     ));
-                  Get.toNamed(AppRoutesNamed.pageDua);
-                },
-                child: Text('Next Page'))
           ],
         ),
       ),

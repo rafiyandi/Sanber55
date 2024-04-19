@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:sanberapp_55/page/nav/page_empat.dart';
+import 'package:sanberapp_55/router/app_routes_named.dart';
 
 class PageTiga extends StatelessWidget {
   const PageTiga({super.key});
@@ -23,8 +25,7 @@ class PageTiga extends StatelessWidget {
                   //       builder: (context) => PageEmpat(),
                   //     ),
                   //     (route) => false);
-                  Navigator.pushNamedAndRemoveUntil(
-                      context, '/page-empat', (route) => false);
+                  Get.toNamed('${AppRoutesNamed.pageEmpat}?kaosKaki');
                 },
                 child: Text('NEXT PAGE 4 ==>')),
           ],
